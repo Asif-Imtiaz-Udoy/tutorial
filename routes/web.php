@@ -18,12 +18,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/test', function (){
-    return "Hello World";
-})->name('test');
+Route::get('/product/{id?}', function ($id = 'all') {
+    $data = [
+        1 => 'Apple',
+        2 => 'Orange',
+        3 => 'Banana'
+    ];
 
-// Route::get('/first-view', function () {
-//     return view('first');
-// });
+    if ($id == 'all') {
+        return $data;
+    } else {
+        return $data[$id] ?? "The fruit is not in the basket";
+    }
+});
 
-Route::view('/first-view', 'first');
