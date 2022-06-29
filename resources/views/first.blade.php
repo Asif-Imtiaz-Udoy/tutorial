@@ -8,6 +8,6 @@
 </head>
 <body>
     <h1>This is our first laravel view</h1>
-    <a href="{{ route('test') }}">Test</a>
+    <a href="{{ route('admin.first') }}">Test</a>
 </body>
 </html>

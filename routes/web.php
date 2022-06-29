@@ -32,3 +32,17 @@ Route::get('/product/{id?}', function ($id = 'all') {
     }
 });
 
+Route::name('admin.')->prefix('admin')->group(function() {
+    Route::get('/group-test', function(){
+        return 'Hello admin';
+    })->name('first');
+    Route::get('/group-test1', function(){
+        return 'Hello admin 1';
+    })->name('second');
+});
+
+Route::get('/group-test', function(){
+    return 'Hello User';
+})->name('first');
+
+Route::view('/first', 'first');
