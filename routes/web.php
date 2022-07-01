@@ -14,11 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->middleware('group');
+Route::get('/', [App\Http\Controllers\TestController::class, 'index']);
 
 
-Route::get('/noaccess', function() {
-    return 'You do not have the access in this application';
-})->name('noaccess');
+Route::get('/noaccess', [App\Http\Controllers\TestController::class, 'noaccess'])->name('noaccess');
