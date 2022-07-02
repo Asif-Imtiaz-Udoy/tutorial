@@ -14,8 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [App\Http\Controllers\TestController::class, 'index']);
-
-Route::get('/noaccess', [App\Http\Controllers\TestController::class, 'noaccess'])->name('noaccess');
-
-Route::resource('post', App\Http\Controllers\ResourceController::class, ['names' => 'post', 'only' => ['show', 'create']]);
+Route::get('/{name}', [App\Http\Controllers\TestController::class, 'index'])->name('home');

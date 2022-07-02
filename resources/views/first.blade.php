@@ -7,7 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>This is our first laravel view</h1>
-    <a href="{{ route('admin.first') }}">Test</a>
+    <h1>My name is {{ $data }} </h1>
 </body>
 </html>
