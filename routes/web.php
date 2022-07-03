@@ -14,4 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/{name}', [App\Http\Controllers\TestController::class, 'index'])->name('home');
+Route::view('/first', 'first');
+Route::view('/about', 'about');
+Route::view('/contact', 'contact');
