@@ -12,4 +12,9 @@ class TestController extends Controller
 
         return view('first', ['data' => $data]);
     }
+
+    public function loop($num, $name)
+    {
+        return view('first', compact('num', 'name'));
+    }
 }

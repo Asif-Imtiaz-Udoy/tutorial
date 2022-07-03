@@ -14,6 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/first', 'first');
-Route::view('/about', 'about');
-Route::view('/contact', 'contact');
+Route::view('/first', 'first')->name('first');
+Route::get('/loop-test/{num}/{name}', [App\Http\Controllers\TestController::class, 'loop'])->name('loop.test');

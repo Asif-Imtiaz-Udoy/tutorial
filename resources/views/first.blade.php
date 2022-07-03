@@ -1,4 +1,6 @@
 @extends('layouts.master')
 @section('content')
-<h1>This is first page</h1>
+@for($i=0; $i<$num; $i++)
+<h1>{{ $name }}</h1>
+@endfor
 @endsection

@@ -12,7 +12,11 @@
 </head>
 
 <body>
+    @if(Route::is('first'))
+    <h3>You do not have permission to show navbar</h3>
+    @else
     @include('layouts.partials.navbar')
+    @endif
 
 
     @yield('content')
